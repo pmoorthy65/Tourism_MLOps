@@ -19,7 +19,7 @@ except RepositoryNotFoundError:
 
 # Upload data from folder to the space
 api.upload_folder(
-    folder_path = "tourism_project/data",
+    folder_path = "data",
     repo_id = repo_id,
     repo_type = repo_type,
 )
