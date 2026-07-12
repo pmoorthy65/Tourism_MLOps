@@ -15,24 +15,23 @@ st.write("The Tourism Package Prediction App is an internal tool for Visit With 
 st.write("Kindly enter the customer details to check whether they are likely to purchase.")
 
 # Collect user input
-Age = st.number_input("Age (customer's age)", min_value = 8, value = 21)
+Age = st.number_input("Age (customer's age)", min_value = 8, value = 35)
 TypeofContact = st.selectbox("Whether the customer is company invited or self enquired", ["Self Enquiry", "Company Invited"])
 CityTier = st.number_input("City Tier the customer is from ", min_value = 1, max_value = 3, value = 1)
-DurationOfPitch = st.number_input("Duration of the sales pitch delivered to the customer.", min_value = 0)
+DurationOfPitch = st.number_input("Duration of the sales pitch delivered to the customer in minutes.", min_value = 15)
 Occupation = st.selectbox("Occupation of the customer", ['Salaried', 'Small Business', 'Large Business', 'Free Lancer'])
 Gender = st.selectbox("Gender of the customer", ['Male', 'Female'])
-NumberOfPersonVisiting = st.number_input("Number of persons accompanying the customer on the trip", min_value = 0, value = 0)
-NumberOfFollowups = st.number_input("Total number of follow-ups by the salesperson after the sales pitch.", min_value = 0)
+NumberOfPersonVisiting = st.number_input("Number of persons accompanying the customer on the trip", min_value = 0, value = 3)
+NumberOfFollowups = st.number_input("Total number of follow-ups by the salesperson after the sales pitch.", min_value = 3)
 ProductPitched = st.selectbox("The type of product pitched to the customer..", ['Basic', 'Deluxe', 'Standard', 'Super Deluxe', 'King'])
 PreferredPropertyStar = st.number_input("Preferred hotel rating by the customer", min_value = 1, max_value = 7, value = 3)
 MaritalStatus = st.selectbox("Marital status of the customer", ["Married", "Single", "Divorced"])
-NumberOfTrips = st.number_input("Average number of trips the customer takes annually.", min_value = 0, value = 1)
+NumberOfTrips = st.number_input("Average number of trips the customer takes annually.", min_value = 0, value = 3)
 Passport = st.selectbox("Whether the customer holds a valid passport", ['Yes', 'No'])
 PitchSatisfactionScore = st.selectbox("Score indicating the customer's satisfaction with the sales pitch.", [1,2,3,4,5])
 OwnCar = st.selectbox("Whether the customer owns a car", ['Yes', 'No'])
-NumberOfChildrenVisiting = st.number_input("Number of children below age 5 accompanying the customer.", min_value = 0, value = 1)
 Designation = st.selectbox("Customer's designation in their current organization.", ['Executive', 'Manager', 'Senior Manager', 'AVP', 'VP'])
-MonthlyIncome = st.number_input("Gross monthly income of the customer.", min_value = 0)
+MonthlyIncome = st.number_input("Gross monthly income of the customer.", min_value = 25000)
 
 
 # Convert categorical inputs to match model training
