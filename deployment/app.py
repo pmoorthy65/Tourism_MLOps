@@ -9,7 +9,7 @@ model_path = hf_hub_download(repo_id="pdhakshinamoor/tourism-model", filename="b
 # Load the model
 model = joblib.load(model_path)
 
-# Streamlit UI for Customer Churn Prediction
+# Streamlit UI for Customer Tourism Package Prediction
 st.title("Tourism Package Prediction App")
 st.write("The Tourism Package Prediction App is an internal tool for Visit With Us staff that predicts whether a customer may purchase a tourism package.")
 st.write("Kindly enter the customer details to check whether they are likely to purchase.")
@@ -29,6 +29,10 @@ OwnCar = st.selectbox("Whether the customer owns a car", ['Yes', 'No'])
 NumberOfChildrenVisiting = st.number_input("Number of children below age 5 accompanying the customer.", min_value = 0, value = 1)
 Designation = st.selectbox("Customer's designation in their current organization.", ['Executive', 'Manager', 'Senior Manager', 'AVP', 'VP'])
 MonthlyIncome = st.number_input("Gross monthly income of the customer.", min_value = 0)
+PitchSatisfactionScore = st.selectbox("Score indicating the customer's satisfaction with the sales pitch.", [1,2,3,4,5])
+ProductPitched = st.selectbox("The type of product pitched to the customer..", ['Basic', 'Deluxe', 'Standard', 'Super Deluxe', 'King'])
+NumberOfFollowups = st.number_input("Total number of follow-ups by the salesperson after the sales pitch.", min_value = 0)
+DurationOfPitch = st.number_input("Duration of the sales pitch delivered to the customer.", min_value = 0)
 
 # Convert categorical inputs to match model training
 input_data = pd.DataFrame([{
@@ -45,7 +49,11 @@ input_data = pd.DataFrame([{
     'OwnCar': 1 if OwnCar == "Yes" else 0,
     'NumberOfChildrenVisiting': NumberOfChildrenVisiting,
     'Designation': Designation,
-    'MonthlyIncome': MonthlyIncome
+    'MonthlyIncome': MonthlyIncome,
+    'PitchSatisfactionScore': PitchSatisfactionScore,
+    'ProductPitched': ProductPitched,
+    'NumberOfFollowups': NumberOfFollowups,
+    'DurationOfPitch': DurationOfPitch
 }])
 
 # Set the classification threshold
