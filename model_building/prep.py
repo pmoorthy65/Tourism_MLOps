@@ -14,6 +14,15 @@ DATASET_PATH = "hf://datasets/pdhakshinamoor/Tourism-Visit-With-Us/tourism.csv"
 tourism_dataset = pd.read_csv(DATASET_PATH)
 print("Dataset loaded successfully.")
 
+# Merge Fe Male to Female for Gender
+tourism_dataset['Gender'] = tourism_dataset['Gender'].replace({'Fe Male': 'Female'})
+# Merge Unmarried to Single for MaritalStatus
+tourism_dataset['MaritalStatus'] = tourism_dataset['MaritalStatus'].replace({'Unmarried': 'Single'})
+# Calculate the median of the NumberOfTrips column
+median_trips = tourism_dataset['NumberOfTrips'].median()
+# Replace values > 15 with the median
+tourism_dataset.loc[tourism_dataset['NumberOfTrips'] > 15, 'NumberOfTrips'] = median_trips
+
 # Define the target variable for the classification task
 target = 'ProdTaken'        # Target variable of 0 or 1
 
@@ -26,8 +35,7 @@ numeric_features = [
     # Discrete numeric values below
     'NumberOfPersonVisiting',
     'NumberOfFollowups',
-    'NumberOfTrips',
-    'NumberOfChildrenVisiting'
+    'NumberOfTrips'
 ]
 
 # List of categorical features in the dataset

@@ -45,8 +45,7 @@ numeric_features = [
     # Discrete numeric values below
     'NumberOfPersonVisiting',
     'NumberOfFollowups',
-    'NumberOfTrips',
-    'NumberOfChildrenVisiting'
+    'NumberOfTrips'
 ]
 
 # List of categorical features in the dataset
