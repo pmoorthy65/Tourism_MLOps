@@ -16,7 +16,7 @@ st.write("Kindly enter the customer details to check whether they are likely to 
 
 # Collect user input
 Age = st.number_input("Age (customer's age)", min_value = 8, value = 21)
-TypeOfContact = st.selectbox("Whether the customer is company invited or self enquired", ["Self Enquiry", "Company Invited"])
+TypeofContact = st.selectbox("Whether the customer is company invited or self enquired", ["Self Enquiry", "Company Invited"])
 CityTier = st.number_input("City Tier the customer is from ", min_value = 1, max_value = 3, value = 1)
 Occupation = st.selectbox("Occupation of the customer", ['Salaried', 'Small Business', 'Large Business', 'Free Lancer'])
 Gender = st.selectbox("Gender of the customer", ['Male', 'Female'])
@@ -37,7 +37,7 @@ DurationOfPitch = st.number_input("Duration of the sales pitch delivered to the 
 # Convert categorical inputs to match model training
 input_data = pd.DataFrame([{
     'Age': Age,
-    'TypeofContact': TypeOfContact,
+    'TypeofContact': TypeofContact,
     'CityTier': CityTier,
     'Occupation': Occupation,
     'Gender': Gender,
