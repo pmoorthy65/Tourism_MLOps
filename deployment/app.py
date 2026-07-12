@@ -37,7 +37,7 @@ DurationOfPitch = st.number_input("Duration of the sales pitch delivered to the 
 # Convert categorical inputs to match model training
 input_data = pd.DataFrame([{
     'Age': Age,
-    'TypeOfContact': TypeOfContact,
+    'TypeofContact': TypeOfContact,
     'CityTier': CityTier,
     'Occupation': Occupation,
     'Gender': Gender,
