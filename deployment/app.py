@@ -43,6 +43,7 @@ input_data = pd.DataFrame([{
     'Occupation': Occupation,
     'Gender': Gender,
     'NumberOfPersonVisiting': NumberOfPersonVisiting,
+    'NumberOfChildrenVisiting': NumberOfChildrenVisiting,
     'PreferredPropertyStar': PreferredPropertyStar,
     'MaritalStatus': MaritalStatus,
     'NumberOfTrips': NumberOfTrips,
