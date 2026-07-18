@@ -31,10 +31,6 @@ numeric_features = [
     'Age',
     'MonthlyIncome',
     'DurationOfPitch',
-    'PitchSatisfactionScore',
-    # Discrete numeric values below
-    'NumberOfPersonVisiting',
-    'NumberOfFollowups',
     'NumberOfTrips'
 ]
 
@@ -49,7 +45,11 @@ categorical_features = [
     'MaritalStatus',
     'Passport',
     'OwnCar',
-    'Designation'
+    'Designation',
+    'PitchSatisfactionScore',
+    'NumberOfPersonVisiting',
+    'NumberOfChildrenVisiting',
+    'NumberOfFollowups',
 ]
 
 # features Unnamed and CustomerID are ignored as they are unique by rows

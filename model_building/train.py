@@ -63,7 +63,7 @@ categorical_features = [
 ]
 
 
-# Set the clas weight to handle class imbalance
+# Set the class weight to handle class imbalance
 class_weight = ytrain.value_counts()[0] / ytrain.value_counts()[1]
 class_weight
 
@@ -92,7 +92,7 @@ model_pipeline = make_pipeline(preprocessor, xgb_model)
 # Start MLflow run
 with mlflow.start_run():
     # Hyperparameter tuning
-    grid_search = GridSearchCV(model_pipeline, param_grid, cv=5, n_jobs=-1)
+    grid_search = GridSearchCV(model_pipeline, param_grid, cv = 5, n_jobs = -1)
     grid_search.fit(Xtrain, ytrain)
 
     # Log all parameter combinations and their mean test scores
