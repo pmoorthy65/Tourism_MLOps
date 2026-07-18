@@ -21,17 +21,18 @@ CityTier = st.number_input("City Tier the customer is from ", min_value = 1, max
 DurationOfPitch = st.number_input("Duration of the sales pitch delivered to the customer in minutes.", min_value = 15)
 Occupation = st.selectbox("Occupation of the customer", ['Salaried', 'Small Business', 'Large Business', 'Free Lancer'])
 Gender = st.selectbox("Gender of the customer", ['Male', 'Female'])
-NumberOfPersonVisiting = st.number_input("Number of persons accompanying the customer on the trip", min_value = 0, value = 3)
-NumberOfFollowups = st.number_input("Total number of follow-ups by the salesperson after the sales pitch.", min_value = 3)
+NumberOfPersonVisiting = st.number_input("Total number of people accompanying the customer on the trip", min_value = 1, value = 5)
+NumberOfChildrenVisiting = st.number_input("Number of children below age 5 accompanying the customer", min_value = 0, value = 3)
+NumberOfFollowups = st.number_input("Total number of follow-ups by the salesperson after the sales pitch", min_value = 1)
 ProductPitched = st.selectbox("The type of product pitched to the customer..", ['Basic', 'Deluxe', 'Standard', 'Super Deluxe', 'King'])
-PreferredPropertyStar = st.number_input("Preferred hotel rating by the customer", min_value = 1, max_value = 7, value = 3)
+PreferredPropertyStar = st.number_input("Preferred hotel rating by the customer", min_value = 3, max_value = 5, value = 3)
 MaritalStatus = st.selectbox("Marital status of the customer", ["Married", "Single", "Divorced"])
 NumberOfTrips = st.number_input("Average number of trips the customer takes annually.", min_value = 0, value = 3)
 Passport = st.selectbox("Whether the customer holds a valid passport", ['Yes', 'No'])
 PitchSatisfactionScore = st.selectbox("Score indicating the customer's satisfaction with the sales pitch.", [1,2,3,4,5])
 OwnCar = st.selectbox("Whether the customer owns a car", ['Yes', 'No'])
 Designation = st.selectbox("Customer's designation in their current organization.", ['Executive', 'Manager', 'Senior Manager', 'AVP', 'VP'])
-MonthlyIncome = st.number_input("Gross monthly income of the customer.", min_value = 25000)
+MonthlyIncome = st.number_input("Gross monthly income of the customer.", min_value = 1000)
 
 
 # Convert categorical inputs to match model training

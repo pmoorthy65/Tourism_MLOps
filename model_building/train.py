@@ -41,11 +41,7 @@ numeric_features = [
     'Age',
     'MonthlyIncome',
     'DurationOfPitch',
-    'PitchSatisfactionScore',
-    # Discrete numeric values below
-    'NumberOfPersonVisiting',
-    'NumberOfFollowups',
-    'NumberOfTrips'
+    'NumberOfTrips',
 ]
 
 # List of categorical features in the dataset
@@ -59,7 +55,11 @@ categorical_features = [
     'MaritalStatus',
     'Passport',
     'OwnCar',
-    'Designation'
+    'Designation',
+    'PitchSatisfactionScore',
+    'NumberOfPersonVisiting',
+    'NumberOfChildrenVisiting',
+    'NumberOfFollowups',
 ]
 
 

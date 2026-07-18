@@ -31,7 +31,7 @@ numeric_features = [
     'Age',
     'MonthlyIncome',
     'DurationOfPitch',
-    'NumberOfTrips'
+    'NumberOfTrips',
 ]
 
 # List of categorical features in the dataset
